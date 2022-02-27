@@ -1,11 +1,16 @@
 package powerpackage;
 
 public class PowerFinder {
-    public static int OF(int xyz, int pqr) {
-        int p = 1;
-        for (int i = 0; i<pqr; i++) {
-            p *= xyz;
+    public static int findPower(int exponent, int base) {
+        int result = 1;
+        for (int index = 0; index<base; index++) {
+            result = getResult(exponent, result);
         }
-        return p;
+        return result;
+    }
+
+    private static int getResult(int exponent, int result) {
+        result *= exponent;
+        return result;
     }
 }
